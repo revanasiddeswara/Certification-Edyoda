@@ -1,0 +1,259 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #10172b;
+}
+h1 {
+  color: #ddd;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.player-card {
+  background-color: #e7e5e5;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  margin-right: 2%;
+  align-items: center; 
+}
+
+.player-card img {
+  max-height: 100%;
+  height: 300px;
+  max-width: 90%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #10172b;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  margin-top: 5%;
+}
+
+/* Apply styles for screens with width 768px and above (desktop view) */
+@media (min-width: 768px) {
+  .player-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .player-card img {
+    margin-right: 20px;
+    height: 300px;
+  }
+  .player-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .player-card p {
+    margin-top: 0;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  .player-card p:last-child {
+    margin-right: 0;
+  }
+}
+.player-details {
+  background-color: #fff;
+  padding: 20px;
+  width: 95%;
+  height: 100%;
+  margin-top: 5%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.player-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.player-table {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 255px;
+  border-collapse: collapse;
+}
+
+.player-table th,
+.player-table td {
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  text-align: left;
+  color: #10172b;
+  font-weight: 600;
+}
+
+.player-table th {
+  background-color: #f2f2f2;
+}
+
+.underline {
+  width: 20%;
+  filter: brightness(0) invert(1);
+}
+nav {
+  background-color: #00000063;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 20px;
+}
+
+/* Styles for the navigation menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu li {
+  margin: 15px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: bisque;
+}
+.nav-menu span:hover {
+  color: bisque;
+}
+.team-dropdown-content a:hover {
+  color: #10172b !important;
+}
+/* Styles for the team dropdown */
+.team-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.team-dropbtn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.team-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  right: 20%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.team-dropdown-content.left {
+  right: 20%;
+}
+
+.team-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.team-dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.team-dropdown:hover .team-dropdown-content {
+  display: block;
+}
+/* mobile menu */
+.mobile-menu {
+  display: none;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.bar {
+  background-color: #f5f5f7;
+  height: 2px;
+  width: 30px;
+  margin: 2px;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .search-bar-mobile button {
+    display: none;
+    margin-top: 10px;
+  }
+  .team-dropdown-content.left {
+    right: auto;
+    left: 0;
+  }
+}
+
+.error-message p {
+  color: #fff;
+}

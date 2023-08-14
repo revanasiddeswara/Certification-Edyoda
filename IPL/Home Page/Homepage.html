@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Homepage.css">
+  <title>Cricket Teams</title>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="https://www.iplt20.com/assets/images/ipl-logo-new-old.png" alt="IPL Logo">
+      <span class="logo-text">IPL Cricket</span>
+    </div>
+    <div class="mobile-menu">
+        <button class="hamburger" id="hamburgerButton">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    <ul class="nav-menu">
+      <li id="homeMenuItem">
+        <a href="/IPL/Home%20Page/Homepage.html">Home</a>
+      </li>
+      <li>
+        <div class="team-dropdown">
+          <span class="team-dropbtn">All Teams</span>
+          <div class="team-dropdown-content">
+            <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=MI" onclick="redirectToTeamDetails('MI')">Mumbai Indians</a>
+            <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=RR" onclick="redirectToTeamDetails('RR')">Rajasthan Royals</a>
+            <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=RCB" onclick="redirectToTeamDetails('RCB')">Royal Challengers Bangalore</a>
+            <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=KKR" onclick="redirectToTeamDetails('KKR')">Kolkata Knight Riders</a>
+            <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=DC" onclick="redirectToTeamDetails('DC')">Deccan Charges</a>
+            <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=PKBS" onclick="redirectToTeamDetails('PKBS')">Punjab Super Kings</a>
+            <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=SRH" onclick="redirectToTeamDetails('SRH')">Sunrisers Hyderabad</a>
+            <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=CSK" onclick="redirectToTeamDetails('CSK')">Chennai Super Kings</a>
+          </div>
+        </div>
+      </li>
+      <li class="search-bar">
+        <a href="/IPL/Search/search.html" id="searchButton">Search</a>
+      </li>
+      <li><!-- Add a button for adding new teams and players -->
+        <button id="addNewButton">Add New Team/Player</button>
+        </li>
+    </ul>
+</nav>
+  <div class="cover-photo">
+    <!-- You can add an image here for the cover photo -->
+  </div>
+  <div class="teams">
+    <h2>Teams</h2>
+    <img src="https://clipart-library.com/images/zTX5n8oLc.png" alt="underline" class="underline">
+  </div>
+
+  <div class="container" id="teamCardContainer">
+    <!-- Teams will be dynamically added here using JavaScript -->
+  </div>
+
+  <div class="team-grid" id="teamGrid">
+    <!-- Teams will be dynamically added here using JavaScript -->
+  </div>
+
+  <script type="module" src="Homepage.js"></script>
+</body>
+</html>

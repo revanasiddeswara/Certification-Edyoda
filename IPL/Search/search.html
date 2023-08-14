@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Search</title>
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <img src="https://www.iplt20.com/assets/images/ipl-logo-new-old.png" alt="IPL Logo">
+          <span class="logo-text">IPL Cricket</span>
+        </div>
+        <div class="mobile-menu">
+            <button class="hamburger" id="hamburgerButton">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </div>
+        <ul class="nav-menu">
+          <li id="homeMenuItem">
+            <a href="/IPL/Home%20Page/Homepage.html">Home</a>
+          </li>
+          <li>
+            <div class="team-dropdown">
+              <span class="team-dropbtn">All Teams</span>
+              <div class="team-dropdown-content">
+                <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=MI" onclick="redirectToTeamDetails('MI')">Mumbai Indians</a>
+                <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=RR" onclick="redirectToTeamDetails('RR')">Rajasthan Royals</a>
+                <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=RCB" onclick="redirectToTeamDetails('RCB')">Royal Challengers Bangalore</a>
+                <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=KKR" onclick="redirectToTeamDetails('KKR')">Kolkata Knight Riders</a>
+                <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=DC" onclick="redirectToTeamDetails('DC')">Deccan Charges</a>
+                <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=PKBS" onclick="redirectToTeamDetails('PKBS')">Punjab Super Kings</a>
+                <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=SRH" onclick="redirectToTeamDetails('SRH')">Sunrisers Hyderabad</a>
+                <a href="/IPL/Team%20Details%20page/TeamDetails.html?team=CSK" onclick="redirectToTeamDetails('CSK')">Chennai Super Kings</a>
+              </div>
+            </div>
+          </li>
+          <li class="search-bar">
+            <a href="/IPL/Search/search.html" id="searchButton">Search</a>
+          </li>
+        </ul>
+    </nav>
+  <div>
+    <h1 class="title">Search</h1>
+    <input type="text" id="searchInput" placeholder="Search player...">
+  </div>
+  <div><h4 class="results">Search Results</h4></div>
+  <div id="playerProfiles">
+    <!-- Player profiles will be displayed here -->
+  </div>
+  <script type="module" src="search.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+/* Add your styling here for the Team Details page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #10172b;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  /* Styles for the navigation bar */
+  nav {
+    background-color: #00000063;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+  }
+  
+  /* Styles for the navigation menu */
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-menu li {
+    margin: 15px;
+  }
+  
+  .nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu a:hover {
+    color: bisque;
+  }
+  .nav-menu span:hover {
+    color: bisque;
+  }
+  .team-dropdown-content a:hover{
+    color:#10172b !important
+  }
+  /* Styles for the team dropdown */
+  .team-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .team-dropbtn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 6px 12px;
+  }
+  
+  .team-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    right: 20%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .team-dropdown-content.left {
+    right: 20%;
+  }
+  
+  .team-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .team-dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .team-dropdown:hover .team-dropdown-content {
+    display: block;
+  }
+  /* mobile menu */
+  .mobile-menu {
+    display: none;
+  }
+  
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .bar {
+    background-color: #f5f5f7;
+    height: 2px;
+    width: 30px;
+    margin: 2px;
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+  
+    .mobile-menu {
+      display: block;
+    }
+  
+    .mobile-menu {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+    .search-bar-mobile button {
+      display: none;
+      margin-top: 10px;
+    }
+    .team-dropdown-content.left {
+      right: auto;
+      left: 0;
+    }
+  }
+
+header {
+    text-align: center;
+    padding: 0.1%;
+    /* box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.3); */
+    position: relative; /* Required for pseudo-element positioning */
+   
+    /* Ensure pseudo-element is inline with text */
+  }
+  
+  header::before {
+    content: "";
+    position: absolute;
+     /* Adjust this value to control the underline position */
+    left: 35%;
+    width: 30%;
+    align-items: center;
+    bottom: -10px;
+    height: 3px; /* Adjust this value to control the underline thickness */
+    background-image: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
+    transform: scaleX(0); /* Initial state: no underline */
+    transition: transform 0.3s ease-in-out; /* Add a transition effect */
+  }
+  
+  header::before {
+    transform: scaleX(1); /* Show underline on hover */
+  }
+  
+  .team-details {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .team-icon {
+    max-width: 10%;
+  }
+  
+  .player-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color:#10172b;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+  }
+ /* Style for the player image */
+.player-image {
+    border: 2px solid #ccc;
+    max-width: 100%; 
+    height: 200px;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .underline{
+    width:10%;
+    filter: brightness(0) invert(1);
+  }
+  .playersheading {
+    text-align: center;
+    padding: 0.1%;
+    /* box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.3); */
+    position: relative; /* Required for pseudo-element positioning */
+   
+    /* Ensure pseudo-element is inline with text */
+  }
+  
+  .playersheading::before {
+    content: "";
+    position: absolute;
+     /* Adjust this value to control the underline position */
+    left: 35%;
+    width: 30%;
+    align-items: center;
+    bottom: -10px;
+    height: 3px; /* Adjust this value to control the underline thickness */
+    background-image: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
+    transform: scaleX(0); /* Initial state: no underline */
+    transition: transform 0.3s ease-in-out; /* Add a transition effect */
+  }
+  
+  .playersheading::before {
+    transform: scaleX(1); /* Show underline on hover */
+  }
+  
+  
+  

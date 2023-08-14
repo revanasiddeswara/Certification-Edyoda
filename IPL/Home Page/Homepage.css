@@ -1,0 +1,252 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  body {
+    background-color: #10172b;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  /* Styles for the navigation bar */
+  nav {
+    background-color: #00000063;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+  }
+  
+  /* Styles for the navigation menu */
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-menu li {
+    margin: 15px;
+  }
+  
+  .nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu a:hover {
+    color: bisque;
+  }
+  .nav-menu span:hover {
+    color: bisque;
+  }
+  .team-dropdown-content a:hover{
+    color:#10172b !important
+  }
+  /* Styles for the team dropdown */
+  .team-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .team-dropbtn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 6px 12px;
+  }
+  
+  .team-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    right: 20%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .team-dropdown-content.left {
+    right: 20%;
+  }
+  
+  .team-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .team-dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .team-dropdown:hover .team-dropdown-content {
+    display: block;
+  }
+  /* mobile menu */
+  .mobile-menu {
+    display: none;
+  }
+  
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .bar {
+    background-color: #f5f5f7;
+    height: 2px;
+    width: 30px;
+    margin: 2px;
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+  
+    .mobile-menu {
+      display: block;
+    }
+  
+    .mobile-menu {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+    .search-bar-mobile button {
+      display: none;
+      margin-top: 10px;
+    }
+    .team-dropdown-content.left {
+      right: auto;
+      left: 0;
+    }
+  }
+
+
+  
+  /* Styling for the cover photo */
+  .cover-photo {
+    background-image: url("https://www.iplt20.com/assets/img/auctiontop.jpg");
+    background-size: 100% auto; /* Change this line */
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 600px;
+    @media (max-width: 767px) {
+      height: 150px; /* Adjust the height for mobile devices */
+    }
+  }
+
+  /* Styling for the two-column boxes */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* To evenly distribute columns */
+}
+
+/* Style for each team card */
+.team-card {
+  width: 35%; /* Subtracting margin */
+  margin: 3%;
+  padding: 1.5%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.teams{
+ text-align: center;
+ margin-top: 20px;
+  font-size: 30px;
+  font-weight: 800;
+}
+/* Style for team logo */
+.team-logo {
+  width: auto;
+  margin-right: 2%;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+
+/* Hover effect */
+.team-card:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Background color with transparency */
+  backdrop-filter: blur(5px); /* Apply background blur */
+  color: white;
+  text-align: center;
+  transform: scale(1.12); /* Add a scaling effect on hover */
+  transition: background-color 0.3s, backdrop-filter 0.3s, transform 0.3s;
+}
+
+/* Style for team details on hover */
+.details-container {
+  text-align: center;
+  margin-left: 25%;
+}
+
+.team-card:hover .details-container {
+  display: block;
+}
+
+
+.team-card:hover .team-logo,
+.team-card:hover .data-team-code{
+  display: none; /* Hide the logo and team name on hover */
+}
+.team-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.iplt20.com/assets/images/story-helix-bg.svg");
+  background-size: cover;
+  opacity: 0; /* Initially transparent */
+  z-index: -1; /* Behind the team details */
+  transition: opacity 0.3s;
+}
+
+.team-card:hover::before {
+  opacity: 1; /* Show overlay on hover */
+}
+.team-card p{
+  padding: 5px;
+}
+.underline{
+  width:20%;
+  filter: brightness(0) invert(1);
+}

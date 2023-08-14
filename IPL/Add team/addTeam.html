@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="addTeam.css">
+  <title>Add Teams and Players</title>
+</head>
+<body>
+  <h1>Add Teams and Players</h1>
+  
+  <form id="addForm">
+    <label for="entityType">Select Entity Type:</label>
+    <select id="entityType" name="entityType">
+      <option value="team">Team</option>
+      <option value="player">Player</option>
+    </select>
+
+    <label for="teamName">Team Name:</label>
+    <input type="text" id="teamName" name="name" required>
+
+    <label for="iconURL">Icon URL:</label>
+    <input type="text" id="iconURL" name="iconURL">
+
+    <!-- Add fields for other properties -->
+
+    <label for="playerName">Total Players:</label>
+    <input type="text" id="playerName" name="totalPlayer">
+    
+    <label for="playerRole">Top Batsman:</label>
+    <input type="text" id="playerRole" name="topBatsman">
+    
+    <label for="playerCountry">Top Bowler:</label>
+    <input type="text" id="playerCountry" name="topBowler">
+    <label for="playerCountry">Championships Won:</label>
+    <input type="text" id="playerCountry" name="chompionship">
+  
+
+    <!-- Add fields for other properties -->
+
+    <button type="submit">Add</button>
+  </form>
+  <div id="teamCards"></div>
+
+  <script type="module" src="addTeam.js"></script>
+</body>
+</html>
